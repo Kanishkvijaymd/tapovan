@@ -115,7 +115,7 @@
 
 .navbar-light .navbar-brand,
 .navbar-light a.btn {
-    height: 75px;
+    height: 100px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -126,6 +126,9 @@
 .navbar-light.sticky-top {
     top: -100px;
     transition: .5s;
+}
+.nav-link-1{
+    padding: 10px 20px;
 }
 
 @media (min-width: 992px) {
@@ -171,6 +174,9 @@
     .header-carousel .owl-carousel-item h1 {
         font-size: 30px;
         font-weight: 600;
+    }
+    .nav-link-1{
+        padding: 10px 25px  10px 0px;
     }
 }
 
@@ -624,4 +630,7 @@
 }
 .FS18{
     font-size: 18px;
+}
+.logo{
+    width: 180px;
 }
