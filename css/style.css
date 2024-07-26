@@ -221,8 +221,9 @@
     display: inline-block;
     margin: 0 5px;
     width: 15px;
+    border-radius: 20px;
     height: 15px;
-    background: transparent;
+    background: white;
     border: 1px solid #FFFFFF;
     transition: .5s;
 }
@@ -235,7 +236,7 @@
     top: 4px;
     left: 4px;
     background: transparent;
-    border: 1px solid #FFFFFF;
+    /* border: 1px solid #FFFFFF; */
 }
 
 .header-carousel .owl-dot.active {
