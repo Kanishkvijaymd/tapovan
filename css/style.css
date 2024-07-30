@@ -630,7 +630,11 @@
 }
 .FS18{
     font-size: 18px;
+    text-transform: uppercase;
 }
 .logo{
     width: 180px;
+}
+.li-f{
+    font-size: 16px;
 }
