@@ -638,3 +638,13 @@
 .li-f{
     font-size: 16px;
 }
+.whsp{
+    position: fixed;
+    width: 50px;
+    bottom: 5%;
+    left: 5%;
+    z-index: 100;
+}
+body{
+    position: relative;
+}
