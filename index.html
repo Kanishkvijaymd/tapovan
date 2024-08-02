@@ -30,6 +30,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("n-6yUn5X9XDEykeBo"); // Replace with your User ID
+        })();
+    </script>
 </head>
 
 <body>
@@ -73,21 +80,6 @@
 
 
     <!-- Navbar Start -->
-    <!-- <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-2 px-lg-5">
-            <img src="/img/logomobile.png" class="logo" alt="">
-        </a>
-        
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="rooms.html" class="nav-item nav-link">Rooms</a>
-            <a href="gallary.html" class="nav-item nav-link">Gallery</a>
-           
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
-        </div>
-        
-    </nav> -->
     <div class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 d-flex flex-column align-items-center">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-2 px-lg-5">
             <img src="/img/logomobile.png" class="logo" alt="">
@@ -294,20 +286,20 @@
                             <h1 class="display-5 mb-4">Free Quote</h1>
                         </div>
                         <!-- <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p> -->
-                        <form>
+                        <form id="contact-form">
                             <div class="row g-3">
                                 <div class="col-12">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" id="Name" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" id="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                                    <input type="text" id="phone" class="form-control border-0" placeholder="Your Mobile Number" style="height: 55px;">
                                 </div>
                                 
                                 <div class="col-12">
-                                    <textarea rows="6" class="form-control border-0" placeholder="Special Note"></textarea>
+                                    <textarea rows="6" id="note" class="form-control border-0" placeholder="Special Note"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
@@ -879,7 +871,22 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // These IDs from the previous steps
+            const serviceID = 'service_acxrp8j';
+            const templateID = 'template_a7f0m2d';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    alert('Query Sent!');
+                }, (err) => {
+                    alert(JSON.stringify(err));
+                });
+        });
+    </script>
 </body>
 
 </html>
