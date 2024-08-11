@@ -409,7 +409,7 @@
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
-                    alert('Query Sent!');
+                    window.location.href = 'thankyoupage.html';
                 }, (err) => {
                     alert(JSON.stringify(err));
                 });

@@ -251,7 +251,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                     </div>
                 </div>
                 <div class="col-lg-6   py-5 wow fadeIn " data-wow-delay="0.5s">
@@ -263,13 +263,13 @@
                         <form id="contact-form">
                             <div class="row g-3">
                                 <div class="col-12">
-                                    <input type="text" id="Name" name="Name" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input required type="text" id="Name" name="Name" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" id="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input required type="email" id="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" id="phone" name="phone" class="form-control border-0" placeholder="Your Mobile Number" style="height: 55px;">
+                                    <input required type="text" id="phone" name="phone" class="form-control border-0" placeholder="Your Mobile Number" style="height: 55px;">
                                 </div>
                                 
                                 <div class="col-12">
@@ -380,7 +380,8 @@
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
-                    alert('Query Sent!');
+                    // alert('Query Sent!');
+                    window.location.href = 'thankyoupage.html';
                 }, (err) => {
                     alert(JSON.stringify(err));
                 });
