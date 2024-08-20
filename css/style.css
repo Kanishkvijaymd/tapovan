@@ -648,3 +648,20 @@
 body{
     position: relative;
 }
+
+@media (max-width:787px){
+    .desktop{
+        display: none !important;
+    }
+    .mobile{
+        display: block;
+    }
+}
+@media (min-width:788px){
+    .desktop{
+        display: block;
+    }
+    .mobile{
+        display: none !important;
+    }
+}
