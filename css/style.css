@@ -254,6 +254,10 @@
     background: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url(../img/aboutus.jpg) center center no-repeat;
     background-size: cover;
 }
+.page-header-about {
+    background: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url(../img/aboutus_new.jpg) center center no-repeat;
+    background-size: contain;
+}
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: var(--light);
