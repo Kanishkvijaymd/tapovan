@@ -670,6 +670,10 @@ body{
 @media (min-width:788px){
     .desktop{
         display: block;
+
+    }
+    .desktop-img-size{
+        height: 781px;
     }
     .mobile{
         display: none !important;
