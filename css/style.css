@@ -636,6 +636,7 @@
     font-size: 18px;
     text-transform: uppercase;
 }
+
 .logo{
     width: 180px;
 }
@@ -665,6 +666,10 @@ body{
     }
     .header-carousel .owl-nav{
         display: none !important;
+    }
+    .FS18{
+        font-size: 14px;
+        text-transform: uppercase;
     }
 }
 @media (min-width:788px){
